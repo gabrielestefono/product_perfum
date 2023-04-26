@@ -3,27 +3,29 @@
 
 /* Estilizando todo o body*/ 
 body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsl(30, 38%, 92%);
+}
+
+.container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
-    background-color: hsl(30, 38%, 92%);
 }
 
 /* Estilizando imagem no mostrador*/ 
 .imgContainer{
     width: 21.4375rem;
-    margin-top: 1.75rem;
-}
-
-.imgContainer__img{
-    width: 21.4375rem;
     height: 15rem;
+    background-repeat: none;
+    background-size: cover;
     border-radius: 10px 10px 0 0;
+    margin-top: 1.75rem;
+    background-image: url(img/image-product-mobile.jpg);
 }
 
 /*Estilizando a parte de baixo*/
-.bodyconteiner{
+.bodyConteiner{
     background-color: white;
     width: 21.4375rem;
     display: flex;
@@ -88,4 +90,72 @@ body{
     background-color: hsl(158, 36%, 37%);
     color: white;
     font-weight: 700;
+}
+
+@media screen and (min-width: 376px){
+    /* Estilizando o body*/
+    body{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        flex-direction: row;
+        max-width: 600px;
+        max-height: 450px;
+    }
+
+    /* Estilizando imagem no mostrador*/ 
+    .imgContainer{
+        width: 300px;
+        height: 450px;
+        background-image: url(img/image-product-desktop.jpg);
+        border-radius: 10px 0 0 10px;
+        margin-top: 0;
+    }
+
+    .bodyConteiner{
+        width: 300px;
+        height: 450px;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .textContainer{
+        margin: 0 auto;
+        width: 15rem;
+    }
+
+    .textContainer__subtitle{
+        margin-top: 1.25rem;
+    }
+    
+    .textContainer__paragraph{
+        margin-top: 1.25rem;
+    }
+    
+    .textContainer__price{
+        margin-top: 1.25rem;
+    }
+    
+    .textContainer__price--actual{
+        margin-top: 1.25rem;
+    }
+    
+    .textContainer__price--before{
+        margin-top: 1.25rem;
+    }
+    
+    .textContainer__chart{
+        margin-top: 1.25rem;
+        width: 15rem;
+        cursor: pointer;
+    }
+
+    .textContainer__chart:hover{
+        background-color: rgb(26,64,49);
+    }
+
+
 }
